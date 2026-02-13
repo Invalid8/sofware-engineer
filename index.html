@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Software Engineering Learning Hub</title>
+
+        <style>
+            body {
+                margin: 0;
+                font-family: "Segoe UI", Tahoma, sans-serif;
+                background-color: #f6f8fb;
+                color: #1e293b;
+            }
+
+            header {
+                text-align: center;
+                padding: 40px 20px;
+                background: #ffffff;
+                border-bottom: 1px solid #e2e8f0;
+            }
+
+            header h1 {
+                margin: 0;
+                font-size: 28px;
+                font-weight: 600;
+            }
+
+            header p {
+                margin-top: 8px;
+                color: #64748b;
+                font-size: 14px;
+            }
+
+            .container {
+                max-width: 1200px;
+                margin: 40px auto;
+                padding: 0 20px;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+                gap: 20px;
+            }
+
+            .card {
+                background: #ffffff;
+                padding: 20px;
+                border-radius: 12px;
+                border: 1px solid #e2e8f0;
+                transition: transform 0.15s ease, box-shadow 0.15s ease;
+            }
+
+            .card:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 10px 22px rgba(0, 0, 0, 0.06);
+            }
+
+            .card h2 {
+                margin: 0 0 10px 0;
+                font-size: 17px;
+                font-weight: 600;
+                color: #0f172a;
+            }
+
+            .card p {
+                font-size: 14px;
+                color: #64748b;
+                margin-bottom: 14px;
+            }
+
+            .card a {
+                text-decoration: none;
+                font-weight: 500;
+                color: #2563eb;
+            }
+
+            .card a:hover {
+                text-decoration: underline;
+            }
+
+            .event-card {
+                grid-column: 1 / -1;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                align-items: center;
+                border: 1px solid #c7d2fe;
+                background: #eef2ff;
+            }
+
+            .event-card img {
+                max-width: 260px;
+                border-radius: 10px;
+                flex-shrink: 0;
+            }
+
+            .event-content {
+                flex: 1;
+                min-width: 240px;
+            }
+
+            .event-content h2 {
+                color: #1e3a8a;
+            }
+
+            .badge {
+                display: inline-block;
+                background: #1e3a8a;
+                color: white;
+                padding: 4px 10px;
+                font-size: 12px;
+                border-radius: 6px;
+                margin-bottom: 10px;
+            }
+
+            footer {
+                text-align: center;
+                padding: 30px;
+                margin-top: 40px;
+                border-top: 1px solid #e2e8f0;
+                color: #64748b;
+                font-size: 13px;
+                background: #ffffff;
+            }
+
+            .creator {
+                margin-top: 10px;
+            }
+
+            .creator a {
+                text-decoration: none;
+                color: #2563eb;
+                font-weight: 500;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <header>
+            <h1>Software Engineering Learning Hub</h1>
+            <p>Free platforms to learn programming, computer science, and software development</p>
+        </header>
+
+        <section class="container" id="resources"></section>
+
+        <footer>
+            Start small. Stay consistent. Build real things.
+            <div class="creator">
+                Built by <a href="https://dantolu33.vercel.app" target="_blank">@dalgoridim</a>
+            </div>
+        </footer>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+
+                const container = document.getElementById("resources");
+
+                // === EVENT CARD (AUTO HIDE AFTER DATE) ===
+                const eventDate = new Date("2026-02-13T13:00:00");
+
+                if (new Date() < eventDate) {
+                    const eventCard = document.createElement("div");
+                    eventCard.classList.add("card", "event-card");
+
+                    eventCard.innerHTML = `
+          <img src="program.jpeg" alt="Career Talk Program">
+
+          <div class="event-content">
+            <span class="badge">Upcoming Event</span>
+            <h2>Career Talk for Ladies in Tech – AAUA</h2>
+            <p>
+              Ready to find your place in tech?<br><br>
+              We’re hosting a special Career Talk for the ladies of AAUA!
+              Expect step-by-step beginner guides and networking with like-minded peers.
+            </p>
+            <p><strong>📅 Date:</strong> Feb 13th, 1PM</p>
+            <p><strong>⚠️ Registration is compulsory:</strong></p>
+            <a href="https://gdg.community.dev/e/m97su8/" target="_blank">
+              Reserve Your Spot
+            </a>
+          </div>
+        `;
+
+                    container.appendChild(eventCard);
+                }
+
+                // === LEARNING PLATFORMS ===
+                const learningPlatforms = [
+                    {
+                        name: "FreeCodeCamp",
+                        description: "Full beginner-friendly courses on web development, Python, and backend engineering.",
+                        url: "https://www.freecodecamp.org/"
+                    },
+                    {
+                        name: "Harvard CS50",
+                        description: "One of the best introductions to computer science in the world.",
+                        url: "https://cs50.harvard.edu/x/"
+                    },
+                    {
+                        name: "MDN Web Docs",
+                        description: "Official documentation for HTML, CSS, JavaScript and modern web development.",
+                        url: "https://developer.mozilla.org/"
+                    },
+                    {
+                        name: "The Odin Project",
+                        description: "Complete full-stack web development curriculum.",
+                        url: "https://www.theodinproject.com/"
+                    },
+                    {
+                        name: "MIT OpenCourseWare",
+                        description: "Free university-level computer science courses from MIT.",
+                        url: "https://ocw.mit.edu/"
+                    },
+                    {
+                        name: "LeetCode",
+                        description: "Practice coding problems for interviews.",
+                        url: "https://leetcode.com/"
+                    },
+                    {
+                        name: "Roadmap.sh",
+                        description: "Step-by-step developer career paths and skill maps.",
+                        url: "https://roadmap.sh/"
+                    },
+                    {
+                        name: "GitHub",
+                        description: "Host and collaborate on real-world software projects.",
+                        url: "https://github.com/"
+                    },
+                    {
+                        name: "Kaggle",
+                        description: "Data science competitions and datasets.",
+                        url: "https://www.kaggle.com/"
+                    }
+                ];
+
+                learningPlatforms.forEach(platform => {
+                    const card = document.createElement("div");
+                    card.classList.add("card");
+
+                    card.innerHTML = `
+          <h2>${platform.name}</h2>
+          <p>${platform.description}</p>
+          <a href="${platform.url}" target="_blank">Visit Platform</a>
+        `;
+
+                    container.appendChild(card);
+                });
+
+            });
+        </script>
+
+    </body>
+
+</html>
