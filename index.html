@@ -149,6 +149,13 @@
             <div class="creator">
                 Built by <a href="https://dantolu33.vercel.app" target="_blank">@dalgoridim</a>
             </div>
+            <div class="gdsc" style="margin-top: 6px;">
+                You can also join the school GDSC:
+                <a href="https://gdg.community.dev/gdg-on-campus-adekunle-ajasin-university-akungba-nigeria/"
+                    target="_blank">
+                    GDG AAUA
+                </a>
+            </div>
         </footer>
 
         <script>
@@ -164,74 +171,70 @@
                     eventCard.classList.add("card", "event-card");
 
                     eventCard.innerHTML = `
-          <img src="program.jpeg" alt="Career Talk Program">
+      <img src="program.jpeg" alt="Career Talk Program">
 
-          <div class="event-content">
-            <span class="badge">Upcoming Event</span>
-            <h2>Career Talk for Ladies in Tech – AAUA</h2>
-            <p>
-              Ready to find your place in tech?<br><br>
-              We’re hosting a special Career Talk for the ladies of AAUA!
-              Expect step-by-step beginner guides and networking with like-minded peers.
-            </p>
-            <p><strong>📅 Date:</strong> Feb 13th, 1PM</p>
-            <p><strong>⚠️ Registration is compulsory:</strong></p>
-            <a href="https://gdg.community.dev/e/m97su8/" target="_blank">
-              Reserve Your Spot
-            </a>
-          </div>
-        `;
+      <div class="event-content">
+        <span class="badge">Upcoming Event</span>
+        <h2>Career Talk for Ladies in Tech – AAUA</h2>
+        <p>
+          Ready to find your place in tech?<br><br>
+          We’re hosting a special Career Talk for the ladies of AAUA!
+          Expect step-by-step beginner guides and networking with like-minded peers.
+        </p>
+        <p><strong>📅 Date:</strong> Feb 13th, 1PM</p>
+        <p><strong>⚠️ Registration is compulsory:</strong></p>
+        <a href="https://gdg.community.dev/e/m97su8/" target="_blank">
+          Reserve Your Spot
+        </a>
+      </div>
+    `;
 
                     container.appendChild(eventCard);
                 }
 
-                // === LEARNING PLATFORMS ===
+                // === LEARNING PLATFORMS (Expanded) ===
                 const learningPlatforms = [
-                    {
-                        name: "FreeCodeCamp",
-                        description: "Full beginner-friendly courses on web development, Python, and backend engineering.",
-                        url: "https://www.freecodecamp.org/"
-                    },
-                    {
-                        name: "Harvard CS50",
-                        description: "One of the best introductions to computer science in the world.",
-                        url: "https://cs50.harvard.edu/x/"
-                    },
-                    {
-                        name: "MDN Web Docs",
-                        description: "Official documentation for HTML, CSS, JavaScript and modern web development.",
-                        url: "https://developer.mozilla.org/"
-                    },
-                    {
-                        name: "The Odin Project",
-                        description: "Complete full-stack web development curriculum.",
-                        url: "https://www.theodinproject.com/"
-                    },
-                    {
-                        name: "MIT OpenCourseWare",
-                        description: "Free university-level computer science courses from MIT.",
-                        url: "https://ocw.mit.edu/"
-                    },
-                    {
-                        name: "LeetCode",
-                        description: "Practice coding problems for interviews.",
-                        url: "https://leetcode.com/"
-                    },
-                    {
-                        name: "Roadmap.sh",
-                        description: "Step-by-step developer career paths and skill maps.",
-                        url: "https://roadmap.sh/"
-                    },
-                    {
-                        name: "GitHub",
-                        description: "Host and collaborate on real-world software projects.",
-                        url: "https://github.com/"
-                    },
-                    {
-                        name: "Kaggle",
-                        description: "Data science competitions and datasets.",
-                        url: "https://www.kaggle.com/"
-                    }
+                    // Beginner Friendly
+                    { name: "FreeCodeCamp", description: "Full beginner-friendly courses on web development, Python, and backend engineering.", url: "https://www.freecodecamp.org/" },
+                    { name: "Harvard CS50", description: "One of the best introductions to computer science in the world.", url: "https://cs50.harvard.edu/x/" },
+                    { name: "Khan Academy - Computing", description: "Beginner-friendly lessons on programming and computational thinking.", url: "https://www.khanacademy.org/computing" },
+                    { name: "The Odin Project", description: "Complete full-stack web development curriculum.", url: "https://www.theodinproject.com/" },
+
+                    // Web Development
+                    { name: "MDN Web Docs", description: "Official documentation for HTML, CSS, JavaScript and modern web development.", url: "https://developer.mozilla.org/" },
+                    { name: "W3Schools", description: "Interactive tutorials for HTML, CSS, JavaScript and more.", url: "https://www.w3schools.com/" },
+                    { name: "Frontend Mentor", description: "Practice frontend development with real-world projects.", url: "https://www.frontendmentor.io/" },
+                    { name: "Scrimba", description: "Interactive coding screencasts for frontend and JavaScript.", url: "https://scrimba.com/" },
+                    { name: "CSS-Tricks", description: "Tips, tricks, and techniques for CSS, design, and frontend.", url: "https://css-tricks.com/" },
+
+                    // Computer Science & University Level
+                    { name: "MIT OpenCourseWare", description: "Free university-level computer science courses from MIT.", url: "https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/" },
+                    { name: "Stanford Engineering Everywhere", description: "Stanford’s free engineering and CS materials.", url: "https://see.stanford.edu/" },
+                    { name: "OSSU Computer Science", description: "Complete open-source computer science degree path.", url: "https://github.com/ossu/computer-science" },
+                    { name: "Coursera Free Courses", description: "Free courses from top universities on programming, CS, AI, and more.", url: "https://www.coursera.org/courses?query=free" },
+
+                    // Algorithms & Data Structures
+                    { name: "GeeksforGeeks", description: "Strong resource for algorithms, data structures and coding practice.", url: "https://www.geeksforgeeks.org/" },
+                    { name: "LeetCode", description: "Practice coding problems for interviews.", url: "https://leetcode.com/" },
+                    { name: "HackerRank", description: "Coding challenges and skill certifications.", url: "https://www.hackerrank.com/" },
+                    { name: "Codeforces", description: "Competitive programming platform.", url: "https://codeforces.com/" },
+                    { name: "InterviewBit", description: "Practice coding, DSA, and system design questions.", url: "https://www.interviewbit.com/" },
+
+                    // Roadmaps & Career Growth
+                    { name: "Roadmap.sh", description: "Step-by-step developer career paths and skill maps.", url: "https://roadmap.sh/" },
+                    { name: "DevDocs", description: "Fast, searchable API documentation.", url: "https://devdocs.io/" },
+                    { name: "GitHub", description: "Host and collaborate on real-world software projects.", url: "https://github.com/" },
+                    { name: "Stack Overflow", description: "Community Q&A for programming questions and solutions.", url: "https://stackoverflow.com/" },
+
+                    // Video Learning
+                    { name: "YouTube Programming Courses", description: "Thousands of full-length free programming tutorials.", url: "https://www.youtube.com/results?search_query=learn+programming+for+beginners" },
+                    { name: "Traversy Media (YouTube)", description: "High-quality web development tutorials.", url: "https://www.youtube.com/@TraversyMedia" },
+                    { name: "Programming with Mosh (YouTube)", description: "Structured programming tutorials.", url: "https://www.youtube.com/@programmingwithmosh" },
+                    { name: "The Net Ninja (YouTube)", description: "Comprehensive coding tutorials for frontend and backend.", url: "https://www.youtube.com/@TheNetNinja" },
+
+                    // AI & Data Science
+                    { name: "Kaggle", description: "Data science competitions and datasets.", url: "https://www.kaggle.com/" },
+                    { name: "fast.ai", description: "Practical deep learning for coders.", url: "https://www.fast.ai/" },
                 ];
 
                 learningPlatforms.forEach(platform => {
@@ -239,16 +242,17 @@
                     card.classList.add("card");
 
                     card.innerHTML = `
-          <h2>${platform.name}</h2>
-          <p>${platform.description}</p>
-          <a href="${platform.url}" target="_blank">Visit Platform</a>
-        `;
+      <h2>${platform.name}</h2>
+      <p>${platform.description}</p>
+      <a href="${platform.url}" target="_blank">Visit Platform</a>
+    `;
 
                     container.appendChild(card);
                 });
 
             });
         </script>
+
 
     </body>
 
